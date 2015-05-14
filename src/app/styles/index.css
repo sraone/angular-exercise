@@ -1,0 +1,27 @@
+.ctr-group{
+	margin: 5px;
+}
+
+.label{
+	text-align: right;
+	width: 180px;
+	margin-right: 5px;
+}
+
+.error{
+	color: red;
+}
+
+.contact-list{
+	float: left;
+	width: 180px;
+}
+
+.contact-list-item{
+	padding: 10px;
+}
+
+.contact-list-item button
+{
+	margin-top: 10px;
+}

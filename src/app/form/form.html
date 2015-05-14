@@ -1,0 +1,39 @@
+<form name="form" novalidate>
+    <h2>Contact Form</h2>
+    <div class="ctr-group">
+        <label class="label" for="name">Name</label>
+        <input type="text" name="name" id="name" ng-model="vm.name" ng-required="true" ng-maxlength="64" placeholder="Full Name">
+        <div class="error" ng-show="form.$submitted || form.name.$touched">
+            <small ng-show="form.name.$error.required">Name can't be empty</small>
+            <small ng-show="form.name.$error.maxlength">Name can't be more than 64 letters</small>
+        </div>
+    </div>
+    <div class="ctr-group">
+        <label for="dob" class="label">DOB</label>
+        <input type="date" name="dob" id="dob" ng-model="vm.dob" placeholder="Date of birth">
+        <div class="error" ng-show="form.$submitted || form.email.$touched">
+            <small ng-show="form.dob.$error.date">Please enter valid date of birth</small>
+         </div>
+    </div>
+    <div class="ctr-group">
+        <label for="email" class="label">Email</label>
+        <input type="email" name="email" id="email" ng-model="vm.email" placeholder="Email address" ng-required="true">
+        <div class="error" ng-show="form.$submitted || form.email.$touched">
+            <small ng-show="form.email.$error.email">Please enter valid email address</small>
+            <small ng-show="form.name.$error.required">Name can't be empty</small>
+         </div>
+    </div>
+    <div class="ctr-group">
+        <label for="group" class="label">Group</label>
+        <select id="group" ng-options="group as group for group in vm.groups" ng-model="vm.group">
+    	</select>
+    </div>
+    <div class="ctr-group">
+    	<label class="label">
+    		<input type="checkbox" ng-model="vm.favourite"> mark as favourite
+    	</label>
+    </div>
+    <div class="ctr-group">
+    	<button type="submit">Save</button>
+    </div>
+</form>

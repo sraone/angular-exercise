@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular</title>
+    <base href="/">
+    <!-- build:css({.tmp,src}) styles/index.css -->
+    <link rel="stylesheet" href="app/styles/index.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div ui-view="">
+    </div>
+    <!-- build:js(.) scripts/libs.js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({.tmp,src}) scripts/app.js -->
+    <script src="app/app.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.bootstrap.js"></script>
+
+    <script src="app/services/services.module.js"></script>
+    <script src="app/services/contact.js"></script>
+
+    <script src="app/form/form.module.js"></script>
+    <script src="app/form/form.js"></script>
+    <script src="app/form/form.controller.js"></script>
+
+    <script src="app/resource/resource.module.js"></script>
+    <script src="app/resource/resource.js"></script>
+    <script src="app/resource/resource.controller.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

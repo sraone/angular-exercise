@@ -1,0 +1,16 @@
+<div class="contact-list">
+    <div ng-repeat="contact in vm.contacts" class="contact-list-item">
+        <span>Id: {{contact.id}}</span>
+        <br>
+        <span>Name: {{contact.name}}</span>
+        <br>
+        <button type="button" ng-click="$parent.vm.view(contact.id)">View</button>
+    </div>
+</div>
+<div class="contact-view" ng-show="vm.selectedContact">
+    <div>Name: {{vm.selectedContact.name}}</div>
+    <div>DOB: {{(vm.selectedContact.dob) || 'not available'}}</div>
+    <div>Email: {{vm.selectedContact.email}}</div>
+    <div>Group: {{vm.selectedContact.group}}</div>
+    <div>Favourite: {{vm.selectedContact.favourite?'YES':'NO'}}</div>
+</div>
